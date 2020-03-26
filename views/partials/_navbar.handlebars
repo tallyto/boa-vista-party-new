@@ -1,0 +1,90 @@
+<div class="navigation">
+  <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+  <label for="navi-toggle" class="navigation__button">
+    <span class="navigation__icon"></span>
+  </label>
+  <div class="navigation__background"></div>
+  <nav class="navigation__nav">
+    <ul class="navigation__list">
+      {{#if user.eAdmin}}
+        <li class="navigation__item">
+          <a href="/admin" class="navigation__link">
+            <span>
+              →
+            </span>
+            Admin
+          </a>
+        </li>
+      {{else}}
+
+      {{/if}}
+      <li class="navigation__item">
+        <a href="#inicio" class="navigation__link" onclick="naviToggle()">
+          <span>
+            →
+          </span>
+          Inicio
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="/atleticas" class="navigation__link">
+          <span>
+            →
+          </span>
+          Atléticas
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a href="/eventos" class="navigation__link">
+          <span>
+            →
+          </span>
+          Eventos
+        </a>
+      </li>
+      <li class="navigation__item">
+        <a
+          href="#popup-contato"
+          class="navigation__link"
+          onclick="naviToggle()"
+        >
+          <span>
+            →
+          </span>
+          Contato
+        </a>
+      </li>
+      {{#if user}}
+        <li class="navigation__item">
+          <a href="/usuario/cadastro" class="navigation__link">
+            <span>
+              →
+            </span>
+            Cadastrar Usuário
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/usuario/logout" class="navigation__link">
+            <span>
+              →
+            </span>
+            Sair
+          </a>
+        </li>
+      {{else}}
+        <li class="navigation__item">
+          <a
+            href="#popup-login"
+            class="navigation__link"
+            onclick="naviToggle()"
+          >
+            <span>
+              →
+            </span>
+            Login
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</div>

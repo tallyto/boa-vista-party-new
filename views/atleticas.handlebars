@@ -1,0 +1,52 @@
+<header class="header header--atleticas" id="inicio">
+  <div class="header__logo-box">
+    <a href="/">
+      <svg aria-label="Boa Vista Party" class="header__logo">
+        <use xlink:href="/assets/img/sprite.svg#icon-white"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="header__text-box header__text-box--arrow">
+    <div class="heading-primary">
+      <h2 class="heading-secondary--white u-text-center">
+        Atléticas
+      </h2>
+    </div>
+    <p class="scroll-down">
+      <a href="#atleticas" class="scroll-down__arrow">
+        Party
+      </a>
+    </p>
+  </div>
+</header>
+<main>
+  <section class="section-atleticas" id="atleticas">
+    <div class="container">
+      <div class="row">
+        {{#each atleticas}}
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div
+                class="card__poster"
+                style="background-image:url('{{img.url}}');"
+              ></div>
+              <div class="card__cta">
+                <div class="card__event-box">
+                  <h2 class="heading-secondary">
+                    {{title}}
+                  </h2>
+                  <p class="card__lema">
+                    {{description}}
+                  </p>
+                </div>
+                <a href="/atleticas/{{slug}}" class="btn btn--color">
+                  Saiba mais!
+                </a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>

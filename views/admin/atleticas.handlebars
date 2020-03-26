@@ -1,0 +1,167 @@
+<!-- HEADER HERO -->
+<header class="header header--atleticas" id="inicio">
+  <div class="header__logo-box">
+    <a href="/">
+      <svg aria-label="Boa Vista Party" class="header__logo">
+        <use xlink:href="/assets/img/sprite.svg#icon-white"></use>
+      </svg>
+    </a>
+  </div>
+
+  <div class="header__text-box header__text-box--arrow">
+    <div class="heading-primary">
+      <h2 class="heading-secondary--white u-text-center">
+        ADMIN | Atléticas
+      </h2>
+    </div>
+    <a href="#newAtletica" class="btn btn--white u-margin-bottom-small">Nova Atletica</a>
+
+    <p class="scroll-down">
+      <a href="#atleticas" class="scroll-down__arrow">Party</a>
+    </p>
+  </div>
+</header>
+
+<main>
+  <section class="section-atleticas" id="atleticas">
+    <div class="container">
+
+      {{#each atleticas}}
+
+      <figure class="card-banner">
+        <div class="card-banner__icon-box">
+          <svg aria-label="" class="card-banner__icon">
+            <use xlink:href="/assets/img/sprite.svg#atleticas"></use>
+          </svg>
+        </div>
+
+        <div class="card-banner__title-box">
+          <h2 class="card-banner__title">{{title}}</h2>
+        </div>
+
+        <div class="card-banner__details">
+          <div class="card-banner__detail-box">
+            <h6 class="card-banner__detail card-banner__detail--organic">
+              {{description}}
+            </h6>
+          </div>
+        </div>
+
+        <a class="card-banner__link" href="#{{_id}}">
+          <span>Editar <i class="emoji-right">👉</i></span>
+        </a>
+        <a class="card-banner__link" href="/admin/deletar/atletica/{{_id}}">
+          <span>Deletar <i class="emoji-right">👉</i></span>
+        </a>
+      </figure>
+
+      {{else}}
+      <h2 class="heading-secondary u-text-center">Nenhuma atlética registrada</h2>
+      {{/each}}
+
+    </div>
+  </section>
+</main>
+
+
+<div class="popup" id="newAtletica">
+  <div class="popup__content">
+    <a href="#" class="popup__close">
+      ×
+    </a>
+    <div class="book">
+      <div class="book__form">
+        <form action="/admin/cadastrar/atletica" method="POST" enctype="multipart/form-data" class="form">
+          <div class="u-margin-bottom-medium u-text-center">
+            <h2 class="heading-secondary">
+              Cadastrar Atletica
+            </h2>
+          </div>
+          <div class="form__group">
+            <input type="text" name="title" id="title" placeholder="Nome da Atletica" class="form__input" required />
+            <label for="title" class="form__label">
+              Nome da Atletica
+            </label>
+          </div>
+          <div class="form__group">
+            <input type="text" name="description" id="description" placeholder="Descrição" class="form__input"
+              required />
+            <label for="description" class="form__label">
+              Descrição
+            </label>
+          </div>
+          <div class="form__group">
+            <input type="text" name="slug" id="slug" placeholder="Slug" class="form__input" required />
+            <label for="slug" class="form__label">
+              Slug
+            </label>
+          </div>
+          <div class="form__group">
+            <input type="file" name="file" id="file" placeholder="Selecionar Imagem" class="form__input" required />
+            <label for="file" class="form__label">
+              Selecionar Imagem
+            </label>
+          </div>
+          <div class="form__group u-text-center">
+            <button type="submit" class="btn btn--color">
+              Cadastrar Atletica →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{#each atleticas}}
+
+<div class="popup editAtletica" id="{{_id}}">
+  <div class="popup__content">
+    <a href="#" class="popup__close">
+      ×
+    </a>
+    <div class="book">
+      <div class="book__form">
+        <form action="/editar/atletica" method="POST" class="form">
+          <div class="u-margin-bottom-medium u-text-center">
+            <h2 class="heading-secondary">
+              Editar Atletica
+            </h2>
+          </div>
+          <input type="hidden" value="{{_id}}" name="id" />
+          <div class="form__group">
+            <input type="text" name="title" id="title" placeholder="Novo nome da Atletica" value="{{title}}"
+              class="form__input" required />
+            <label for="title" class="form__label">
+              Novo nome da Atletica
+            </label>
+          </div>
+          <div class="form__group">
+            <input type="text" name="description" id="description" placeholder="Nova Descrição" value="{{description}}"
+              class="form__input" required />
+            <label for="description" class="form__label">
+              Nova Descrição
+            </label>
+          </div>
+          <div class="form__group">
+            <input type="text" name="slug" id="slug" placeholder="Nova Slug" value="{{slug}}" class="form__input"
+              required />
+            <label for="slug" class="form__label">
+              Nova Slug
+            </label>
+          </div>
+          <div class="form__group u-text-center">
+            <button type="submit" class="btn btn--color">
+              Editar Atletica →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{else}}
+
+{{/each}}

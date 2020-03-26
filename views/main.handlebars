@@ -1,0 +1,113 @@
+<header class="header header--home" id="inicio">
+  <div class="header__logo-box">
+    <a href="/">
+      <svg aria-label="Boa Vista Party" class="header__logo">
+        <use xlink:href="/assets/img/sprite.svg#icon-white"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="header__text-box">
+    <div class="heading-primary">
+      <svg aria-label="Boa Vista Party" class="heading-primary--main">
+        <use xlink:href="/assets/img/sprite.svg#logo-white"></use>
+      </svg>
+      <h1 class="heading-primary--sub">
+        Seu site de eventos e ações acadêmicas em Boa Vista/RR
+      </h1>
+    </div>
+    <p class="scroll-down">
+      <a href="#party" class="scroll-down__arrow">
+        Party
+      </a>
+    </p>
+  </div>
+</header>
+<main>
+  <section class="section-about">
+    <div class="container--flex">
+      <div class="feature-box">
+        <svg aria-label="" class="feature-box__icon">
+          <use xlink:href="/assets/img/sprite.svg#atleticas"></use>
+        </svg>
+        <h3 class="feature-box__heading u-margin-bottom-small">
+          Atléticas
+        </h3>
+        <p class="feature-box__text">
+          As
+          <abbr title="Associação Atlética Acadêmica">
+            A.A.A´s
+          </abbr>
+          são as
+          entidades responsáveis em promover e coordenar a parte esportiva
+          de cada faculdade, organizando treinos e campeonatos externos e
+          internos em diversas modalidades esportivas.
+        </p>
+        <a href="/atleticas" class="btn btn--color">
+          Saiba mais!
+        </a>
+      </div>
+      <div class="feature-box">
+        <svg aria-label="" class="feature-box__icon">
+          <use xlink:href="/assets/img/sprite.svg#eventos"></use>
+        </svg>
+        <h3 class="feature-box__heading u-margin-bottom-small">
+          Eventos
+        </h3>
+        <p class="feature-box__text">
+          Aqui você vai ficar por dentro de todos os eventos e ações
+          sociais, das atléticas e parceiros.
+        </p>
+        <a href="/eventos" class="btn btn--color">
+          Saiba mais!
+        </a>
+      </div>
+      <div class="feature-box">
+        <svg aria-label="" class="feature-box__icon">
+          <use xlink:href="/assets/img/sprite.svg#parceiros"></use>
+        </svg>
+        <h3 class="feature-box__heading u-margin-bottom-small">
+          Parceiros
+        </h3>
+        <p class="feature-box__text">
+          Conheça os lugares onde associados das atleticas tem descontos.
+        </p>
+        <a href="/parceiros" class="btn btn--color">
+          Saiba mais!
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section-features">
+    <div class="container" id="party">
+      <div class="u-text-center u-margin-bottom-medium">
+        <h2 class="heading-secondary--white">
+          Eventos
+        </h2>
+      </div>
+      <div class="row owl-carousel" id="party-event-slider">
+
+        {{#each eventos}}
+        <div class="card">
+          <div class="card__poster" style="background-image: url({{img.url}});">
+          </div>
+          <div class="card__cta">
+            <div class="card__event-box">
+              <p class="card__event-title">
+                {{title}}
+              </p>
+              <p class="card__event-date">
+                {{description}}
+              </p>
+            </div>
+            <a href="{{slug}}" class="btn btn--color">
+              Saiba mais!
+            </a>
+          </div>
+        </div>
+        {{else}}
+        {{/each}}
+        
+      </div>
+    </div>
+  </section>
+</main>

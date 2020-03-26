@@ -1,0 +1,66 @@
+<header class="header header--arrow" id="inicio">
+  <div class="header__logo-box">
+    <a href="/">
+      <svg aria-label="Boa Vista Party" class="header__logo">
+        <use xlink:href="/assets/img/sprite.svg#icon-white"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="header__text-box header__text-box--arrow">
+    <div class="heading-primary">
+      <h2 class="heading-secondary--white u-text-center">
+        Eventos
+      </h2>
+    </div>
+    <p class="scroll-down">
+      <a href="#not-found-page" class="scroll-down__arrow">
+        Party
+      </a>
+    </p>
+  </div>
+</header>
+<main>
+  <section class="section-404">
+    <div class="container">
+      <div class="row">
+        {{#each eventos}}
+          <div class="col s12 m6 l4">
+            <div class="card">
+              <div class="card__poster" style="background-image:url('{{img.url}}');"></div>
+              <div class="card__cta">
+                <div class="card__event-box">
+                  <h2 class="heading-secondary">
+                    {{title}}
+                  </h2>
+                  <p class="card__lema">
+                    {{description}}
+                  </p>
+                </div>
+                <a href="/eventos/{{slug}}" class="btn btn--color">
+                  Saiba mais!
+                </a>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+        {{#each eventos}}
+
+        {{else}}
+          <div class="col s12 m12 l12">
+            <div class="not-found-page" id="not-found-page">
+              <h2 class="heading-secondary u-text-center u-margin-bottom-medium">
+                Nenhum evento disponível
+              </h2>
+              <svg aria-label="" class="not-found-page__image u-margin-bottom-medium">
+                <use xlink:href="/assets/img/sprite.svg#events"></use>
+              </svg>
+              <a href="/" class="btn btn--color u-text-center">
+                Voltar
+              </a>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>
