@@ -85,28 +85,29 @@
         </h2>
       </div>
       <div class="row owl-carousel" id="party-event-slider">
-
         {{#each eventos}}
-        <div class="card">
-          <div class="card__poster" style="background-image: url({{img.url}});">
-          </div>
-          <div class="card__cta">
-            <div class="card__event-box">
-              <p class="card__event-title">
-                {{title}}
-              </p>
-              <p class="card__event-date">
-                {{description}}
-              </p>
+          <div class="card">
+            <div
+              class="card__poster"
+              style="background-image: url({{img.url}});"
+            ></div>
+            <div class="card__cta">
+              <div class="card__event-box">
+                <p class="card__event-title">
+                  {{title}}
+                </p>
+                <p class="card__event-date">
+                  {{description}}
+                </p>
+              </div>
+              <a href="{{slug}}" class="btn btn--color">
+                Saiba mais!
+              </a>
             </div>
-            <a href="{{slug}}" class="btn btn--color">
-              Saiba mais!
-            </a>
           </div>
-        </div>
         {{else}}
+
         {{/each}}
-        
       </div>
     </div>
   </section>
