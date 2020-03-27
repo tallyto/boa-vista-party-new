@@ -1,4 +1,4 @@
+# Allow crawling of all content
 User-agent: *
-Allow: /
-Disallow: assets/
-Sitemap: /sitemap.xml
+Disallow:
+Sitemap: https://boa-vista-party.herokuapp.com/sitemap.xml
