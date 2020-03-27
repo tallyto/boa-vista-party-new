@@ -1,6 +1,5 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
-const serveStatic = require('serve-static');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -43,13 +42,14 @@ class App {
     );
 
     // Middleware
+    this.server.use(compression());
     this.server.use(bodyParser.urlencoded({ extended: true }));
     this.server.use(bodyParser.json());
-    this.server.use(serveStatic(path.join(__dirname, 'public')));
+    this.server.use(express.static(path.join(__dirname, 'public')));
     this.server.use(flash());
     this.server.use(cookieParser());
     this.server.use(helmet());
-    this.server.use(compression());
+
 
     // Auth
     this.server.use(passport.initialize());
