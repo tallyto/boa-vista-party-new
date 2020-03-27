@@ -13,17 +13,18 @@
       </h2>
     </div>
     <p class="scroll-down">
-      <a href="#not-found-page" class="scroll-down__arrow">
+      <a href="#events" class="scroll-down__arrow">
         Party
       </a>
     </p>
   </div>
 </header>
 <main>
-  <section class="section-404">
+  <section class="section-404" id="events">
     <div class="container">
       <div class="row">
         {{#each eventos}}
+      <a href="#events" class="scroll-down__arrow">
           <div class="col s12 m6 l4">
             <div class="card">
               <div
@@ -50,7 +51,7 @@
 
         {{else}}
           <div class="col s12 m12 l12">
-            <div class="not-found-page" id="not-found-page">
+            <div class="not-found-page" id="events">
               <h2
                 class="heading-secondary u-text-center u-margin-bottom-medium"
               >
