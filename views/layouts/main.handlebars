@@ -1,300 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-      {{{title}}}
-    </title>
 
-    <!-- title 38 caracteres -->
-    <meta
-      name="title"
-      content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>
+    {{{title}}}
+  </title>
 
-    <!-- title 139 caracteres -->
-    <meta
-      name="description"
-      content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos."
-    />
-    <meta name="keywords"
-        content="festa, faculdade, universidade, esporte, beneficente, ufrr, uerr, estacio, ifrr, claretiano, fares">
-    <link rel="canonical" href="https://boa-vista-party.herokuapp.com/" />
-    <meta name="robots" content="index, follow" />
+  <!-- title 38 caracteres -->
+  <meta name="title" content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR" />
 
-    <!-- FAVICONS -->
-    <link rel="icon" type="image/svg+xml" href="icon.svg" />
-    <link
-      rel="mask-icon"
-      href="/assets/img/icon-black-mask-v2.svg"
-      color="#ff416c"
-    />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicon-16x16.png"
-    />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon-32x32.png"
-    />
-    <link
-      rel="alternate icon"
-      type="image/png"
-      href="android-chrome-48x48.png"
-    />
+  <!-- title 139 caracteres -->
+  <meta name="description"
+    content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos." />
+  <meta name="keywords"
+    content="festa, faculdade, universidade, esporte, beneficente, ufrr, uerr, estacio, ifrr, claretiano, fares">
+  <link rel="canonical" href="https://boa-vista-party.herokuapp.com/" />
+  <meta name="robots" content="index, follow" />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/apple-touch-icon-180x180.png"
-    />
+  <!-- FAVICONS -->
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="mask-icon" href="/assets/img/icon-black-mask-v2.svg" color="#ff416c" />
+  <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="alternate icon" type="image/png" href="android-chrome-48x48.png" />
 
-    <!-- ANDROID CONFIG -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#ff416c" />
-    <meta name="application-name" content="Boa Vista Party" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
 
-    <!-- IOS CONFIG -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
-    <meta name="apple-mobile-web-app-title" content="Boa Vista Party" />
+  <!-- ANDROID CONFIG -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#ff416c" />
+  <meta name="application-name" content="Boa Vista Party" />
 
-    <link
-      rel="image_src"
-      href="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png"
-    />
+  <!-- IOS CONFIG -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Boa Vista Party" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://boa-vista-party.herokuapp.com/" />
-    <meta
-      property="og:title"
-      content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR"
-    />
-    <meta
-      property="og:description"
-      content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos."
-    />
-    <meta
-      property="og:image"
-      itemprop="image"
-      content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png"
-    />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Boa Vista Party" />
-    <!-- As próximas tags são opcionais mas recomendadas -->
-    <meta property="og:image:width" content="790" />
-    <meta property="og:image:height" content="395" />
+  <link rel="image_src" href="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta
-      property="twitter:url"
-      content="https://boa-vista-party.herokuapp.com/"
-    />
-    <meta
-      property="twitter:title"
-      content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR"
-    />
-    <meta
-      property="twitter:description"
-      content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos."
-    />
-    <meta
-      property="twitter:image"
-      content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png"
-    />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boa-vista-party.herokuapp.com/" />
+  <meta property="og:title" content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR" />
+  <meta property="og:description"
+    content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos." />
+  <meta property="og:image" itemprop="image"
+    content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Boa Vista Party" />
+  <!-- As próximas tags são opcionais mas recomendadas -->
+  <meta property="og:image:width" content="790" />
+  <meta property="og:image:height" content="395" />
 
-    <!-- http://schema.org/ -->
-    <meta
-      itemprop="name"
-      content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR"
-    />
-    <meta
-      itemprop="description"
-      content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos."
-    />
-    <meta
-      itemprop="image"
-      content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png"
-    />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://boa-vista-party.herokuapp.com/" />
+  <meta property="twitter:title" content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR" />
+  <meta property="twitter:description"
+    content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos." />
+  <meta property="twitter:image" content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png" />
 
-    <!-- SITEMAP AND ROBOTS USE -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <!-- http://schema.org/ -->
+  <meta itemprop="name" content="Boa Vista Party - Seu site de eventos e ações acadêmicas em Boa Vista/RR" />
+  <meta itemprop="description"
+    content="Fique por dentro de todas as festas e ações esportivas das maiores atléticas do estado de RR, associe-se e tenha os melhores descontos." />
+  <meta itemprop="image" content="https://boa-vista-party.herokuapp.com/assets/img/boa-vista-party-thumb.png" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/assets/css/style.min.css" />
+  <!-- SITEMAP AND ROBOTS USE -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <meta name="google-site-verification" content="DgZ6up2X28yOset-bbl7id8dDk7Vh8EPbvaUJiXN2o4" />
-    <meta name="google-site-verification" content="c5yDOfIZwFeN58USyxRSF_j5On5_vdxOGCnToVL6OFI" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.min.css" />
 
-  </head>
+  <meta name="google-site-verification" content="DgZ6up2X28yOset-bbl7id8dDk7Vh8EPbvaUJiXN2o4" />
+  <meta name="google-site-verification" content="c5yDOfIZwFeN58USyxRSF_j5On5_vdxOGCnToVL6OFI" />
+
+</head>
 
 <body>
 
-     {{>_navbar}}
+  {{>_navbar}}
 
-    <main>
-        {{#if error}}
+  <main>
 
-        <div class="alert alert-danger mt-2">{{error}}</div>
-        <script>
-        $(document).ready(function() {
-          const toastHTML =
-          '
-            <p>
-              {{error}}
-            </p>
-            <div class="toast-action toast-action--cancel"></div>
-          ';
-          M.toast({
-            html: toastHTML,
-            inDuration: 400,
-            displayLength: 5000
-          });
+    {{>_error}}
+    {{>_msg}}
 
-          </script>
-        });
 
-        {{else}}
+    {{{body}}}
 
-        {{/if}}
 
-        {{{body}}}
 
-        {{>_msg}}
+  </main>
 
-    </main>
+  {{>_footer}}
 
-    {{>_footer}}
-
-    <div class="popup" id="popup-login">
-  <div class="popup__content">
-    <a href="#" class="popup__close">
-      ×
-    </a>
-    <div class="book">
-      <div class="book__form">
-        <form action="/usuario/login" method="POST" class="form">
-          <div class="u-margin-bottom-medium u-text-center">
-            <h2 class="heading-secondary">
-              Login
-            </h2>
-          </div>
-          <div class="form__group">
-            <input type="email" name="email" id="email" placeholder="Email" class="form__input" required />
-            <label for="email" class="form__label">
-              Email
-            </label>
-          </div>
-          <div class="form__group u-margin-bottom-medium">
-            <input type="password" name="senha" id="password" placeholder="Senha" class="form__input" required />
-            <label for="password" class="form__label">
-              Senha
-            </label>
-          </div>
-          <div class="form__group u-text-center">
-            <button class="btn btn--color">
-              Entrar →
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="popup" id="popup-contato">
-  <div class="popup__content">
-    <a href="#" class="popup__close">
-      ×
-    </a>
-    <div class="book">
-      <div class="book__form">
-        <form action="https://formspree.io/xdoaoyzw" method="POST" class="form">
-          <div class="u-margin-bottom-medium u-text-center">
-            <h2 class="heading-secondary">
-              Contato
-            </h2>
-          </div>
-          <div class="form__group">
-            <input type="email" name="email" id="email" placeholder="Seu Email" class="form__input" required />
-            <label for="email" class="form__label">
-              Seu Email
-            </label>
-          </div>
-          <div class="form__group u-margin-bottom-small">
-            <textarea name="mensagem" id="mensagem" placeholder="Mensagem" class="form__textarea" required></textarea>
-            <label for="mensagem" class="form__label">
-              Mensagem
-            </label>
-          </div>
-          <div class="form__group u-text-center">
-            <button class="btn btn--color">
-              Enviar →
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="popup" id="prevent-corona">
-  <div class="popup__content" style="padding: 0;">
-    <a href="#" class="popup__close">
-      ×
-    </a>
-    <div class="book">
-      <div class="book__form">
-        <form action="#" class="form">
-          <div class="u-margin-bottom-small u-text-center">
-            <h2 class="heading-secondary">
-              Previna-se
-            </h2>
-          </div>
-          <div
-            class="card"
-            style="width: 100%; box-shadow: none; -webkit-box-shadow: none;"
-          >
-            <div
-              class="card__poster"
-              style="background-image: url(https://upload-party.s3.sa-east-1.amazonaws.com/e5cf24503f385a28caf306adbc4e3373-fique-em-casa.jpg);"
-            ></div>
-            <div class="card__cta">
-              <div class="card__event-box">
-                <p class="card__event-title">
-                  Fique em casa
-                </p>
-                <p class="card__event-date">
-                  Ajude a parar o virus
-                </p>
-              </div>
-              <a href="#card" class="btn btn--color">
-                Concordo →
-              </a>
+  <div class="popup" id="popup-login">
+    <div class="popup__content">
+      <a href="#" class="popup__close">
+        ×
+      </a>
+      <div class="book">
+        <div class="book__form">
+          <form action="/usuario/login" method="POST" class="form">
+            <div class="u-margin-bottom-medium u-text-center">
+              <h2 class="heading-secondary">
+                Login
+              </h2>
             </div>
-          </div>
-        </form>
+            <div class="form__group">
+              <input type="email" name="email" id="email" placeholder="Email" class="form__input" required />
+              <label for="email" class="form__label">
+                Email
+              </label>
+            </div>
+            <div class="form__group u-margin-bottom-medium">
+              <input type="password" name="senha" id="password" placeholder="Senha" class="form__input" required />
+              <label for="password" class="form__label">
+                Senha
+              </label>
+            </div>
+            <div class="form__group u-text-center">
+              <button class="btn btn--color">
+                Entrar →
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="popup" id="popup-contato">
+    <div class="popup__content">
+      <a href="#" class="popup__close">
+        ×
+      </a>
+      <div class="book">
+        <div class="book__form">
+          <form action="https://formspree.io/xdoaoyzw" method="POST" class="form">
+            <div class="u-margin-bottom-medium u-text-center">
+              <h2 class="heading-secondary">
+                Contato
+              </h2>
+            </div>
+            <div class="form__group">
+              <input type="email" name="email" id="email" placeholder="Seu Email" class="form__input" required />
+              <label for="email" class="form__label">
+                Seu Email
+              </label>
+            </div>
+            <div class="form__group u-margin-bottom-small">
+              <textarea name="mensagem" id="mensagem" placeholder="Mensagem" class="form__textarea" required></textarea>
+              <label for="mensagem" class="form__label">
+                Mensagem
+              </label>
+            </div>
+            <div class="form__group u-text-center">
+              <button class="btn btn--color">
+                Enviar →
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<script defer src="/assets/js/bundle.min.js"></script>
+  <div class="popup" id="prevent-corona">
+    <div class="popup__content" style="padding: 0;">
+      <a href="#" class="popup__close">
+        ×
+      </a>
+      <div class="book">
+        <div class="book__form">
+          <form action="#" class="form">
+            <div class="u-margin-bottom-small u-text-center">
+              <h2 class="heading-secondary">
+                Previna-se
+              </h2>
+            </div>
+            <div class="card" style="width: 100%; box-shadow: none; -webkit-box-shadow: none;">
+              <div class="card__poster"
+                style="background-image: url(https://upload-party.s3.sa-east-1.amazonaws.com/e5cf24503f385a28caf306adbc4e3373-fique-em-casa.jpg);">
+              </div>
+              <div class="card__cta">
+                <div class="card__event-box">
+                  <p class="card__event-title">
+                    Fique em casa
+                  </p>
+                  <p class="card__event-date">
+                    Ajude a parar o virus
+                  </p>
+                </div>
+                <a href="#card" class="btn btn--color">
+                  Concordo →
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="/assets/js/bundle.min.js"></script>
 </body>

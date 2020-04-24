@@ -18,6 +18,5 @@
         "class-methods-use-this": "off",
         "linebreak-style": "off",
         "no-unused-vars": "off"
-
     }
 }
